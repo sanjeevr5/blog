@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Me
+title: Data scientist with a focus on natural language and vision.
 permalink: /about/
 ---
 
