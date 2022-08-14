@@ -6,10 +6,10 @@ permalink: /NLP With DL/
 
 # NLP with Pytorch
 
-## 1. Binary classification problem using RNNs
+## [1. Binary classification problem using RNNs](https://github.com/sanjeevr5/NLP_Excercises/blob/main/DL_NLP_With_Torch_1.ipynb)
 
-**This exercise is performed on IMDB movie reviews dataset. There are two sentiments here 0. Negative 1. Positive. **
-<i> Techniques used </i>
+**This exercise is performed on IMDB movie reviews dataset. There are two sentiments here 0. Negative 1. Positive.**
+*Techniques used*
 
 1. We shall train our embedding representations.
 2. Using an RNN architecture with pad_sequences, pack_pad_sequences and pad_packed_sequences.
@@ -17,7 +17,7 @@ permalink: /NLP With DL/
 4. The sequences should not be too long. There should be a clipping factor and hence choose the vocabulary wisely.LSTMs cannot handle very long input sequence.
 5. Passing outputs of output layer or the hidden state to the dense layer.
 
-## 2. Multiclass classification with RNNs
+## 2. [Multiclass classification with RNNs](https://github.com/sanjeevr5/NLP_Excercises/blob/main/DL_NLP_With_Torch_2.ipynb)
 
 This exercise is performed on AGNews dataset with four news categories:
 
@@ -26,7 +26,7 @@ This exercise is performed on AGNews dataset with four news categories:
 3 : Business
 4 : Sci/Tec 
 
-<i> Techniques used </i>
+*Techniques used*
 
 1. We shall use bpeMB word representations as word vectors. This is a sub word tokenization process with a vector for every sub token. Sub-word tokens can make the sentences longer and hence to be used with care.
 2. We will just use the titles to predict the news category.
@@ -34,7 +34,7 @@ This exercise is performed on AGNews dataset with four news categories:
 4. Dataloaders to have generator kind of data feed to the model.
 5. Passing outputs of output layer or the hidden state to the dense layer.
 
-## 3. A multiclass classification using the Embedding bag layer
+## [3. A multiclass classification using the Embedding bag layer](https://github.com/sanjeevr5/NLP_Excercises/blob/main/DL_NLP_With_Torch_3.ipynb)
 
 The Embedding layer gives us a vector representation for every token while the embeddingbg performs an aggregation operation on top of every sentence and returns the result.
 
@@ -48,11 +48,11 @@ Embedding bag O/ P: There is no need of padding tokens it can be directly fed. (
 
 Embedding bag since it performs some aggregate operation sequential information is lost. There is no need of padding. Offsets should be mentioned instead of the padding. The offsets of above example is [0, 4] since first sentence starts from 0 and second sentence starts at 4th index.
 
-## 4. Football name generator with char RNN
+## [4. Football name generator with char RNN](https://github.com/sanjeevr5/NLP_Excercises/blob/main/DL_NLP_With_Torch_5.ipynb)
 
 1. Without conditional generation - **implemented**
 2. With conditional generation -- **yet to implement**
 
 More at : https://pytorch.org/docs/stable/generated/torch.nn.EmbeddingBag.html
 
-## 5. Classification with ULMFiT (AWD-LSTM) and fastai
+## [5. Classification with ULMFiT (AWD-LSTM) and fastai](https://github.com/sanjeevr5/NLP_Excercises/blob/main/DL_With_NLP_ULMFiT_LM.ipynb)
