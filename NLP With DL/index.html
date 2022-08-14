@@ -4,22 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Sanjeev’s Blog | (Ever) learning to help machines understand language and pictures.</title>
+<title>NLP With DL | Sanjeev’s Blog</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Sanjeev’s Blog" />
+<meta property="og:title" content="NLP With DL" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="(Ever) learning to help machines understand language and pictures." />
 <meta property="og:description" content="(Ever) learning to help machines understand language and pictures." />
-<link rel="canonical" href="https://sanjeevr5.github.io/blog/" />
-<meta property="og:url" content="https://sanjeevr5.github.io/blog/" />
+<link rel="canonical" href="https://sanjeevr5.github.io/blog/NLP%20With%20DL/" />
+<meta property="og:url" content="https://sanjeevr5.github.io/blog/NLP%20With%20DL/" />
 <meta property="og:site_name" content="Sanjeev’s Blog" />
-<meta property="og:image" content="https://sanjeevr5.github.io/blog/images/logo.png" />
 <meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://sanjeevr5.github.io/blog/images/logo.png" />
-<meta property="twitter:title" content="Sanjeev’s Blog" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="NLP With DL" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"(Ever) learning to help machines understand language and pictures.","headline":"Sanjeev’s Blog","image":"https://sanjeevr5.github.io/blog/images/logo.png","name":"Sanjeev’s Blog","url":"https://sanjeevr5.github.io/blog/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"(Ever) learning to help machines understand language and pictures.","headline":"NLP With DL","url":"https://sanjeevr5.github.io/blog/NLP%20With%20DL/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sanjeevr5.github.io/blog/feed.xml" title="Sanjeev's Blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,47 +69,76 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p>This site is built with <a href="https://github.com/fastai/fastpages">fastpages</a>, An easy to use blogging platform with extra features for Jupyter Notebooks.</p>
+        <article class="post">
 
-<p><img src="/blog/images/diagram.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+  <header class="post-header">
+    <h1 class="post-title">NLP With DL</h1>
+  </header>
 
-<p><a href="https://github.com/fastai/fastpages">fastpages</a> automates the process of creating blog posts via GitHub Actions, so you don’t have to fuss with conversion scripts.  A full list of features can be found on <a href="https://github.com/fastai/fastpages">GitHub</a>.</p>
+  <div class="post-content">
+    <h1 id="nlp-with-pytorch">NLP with Pytorch</h1>
 
-<p>You can edit the <code class="language-plaintext highlighter-rouge">index.html</code> file to change this content.</p>
+<h2 id="1-binary-classification-problem-using-rnns">1. Binary classification problem using RNNs</h2>
 
-<h1 id="posts">Posts</h1>
+<p>**This exercise is performed on IMDB movie reviews dataset. There are two sentiments here 0. Negative 1. Positive. **
+<i> Techniques used </i></p>
 
+<ol>
+  <li>We shall train our embedding representations.</li>
+  <li>Using an RNN architecture with pad_sequences, pack_pad_sequences and pad_packed_sequences.</li>
+  <li>Dataloaders to have generator kind of data feed to the model.</li>
+  <li>The sequences should not be too long. There should be a clipping factor and hence choose the vocabulary wisely.LSTMs cannot handle very long input sequence.</li>
+  <li>Passing outputs of output layer or the hidden state to the dense layer.</li>
+</ol>
 
+<h2 id="2-multiclass-classification-with-rnns">2. Multiclass classification with RNNs</h2>
 
-  
+<p>This exercise is performed on AGNews dataset with four news categories:</p>
 
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
+<p>1 : World
+2 : Sports
+3 : Business
+4 : Sci/Tec</p>
 
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
+<p><i> Techniques used </i></p>
 
- 
-  
+<ol>
+  <li>We shall use bpeMB word representations as word vectors. This is a sub word tokenization process with a vector for every sub token. Sub-word tokens can make the sentences longer and hence to be used with care.</li>
+  <li>We will just use the titles to predict the news category.</li>
+  <li>This RNN architecture does not pad sequences, we shall feed the packed sequences directly to the embedding layer.</li>
+  <li>Dataloaders to have generator kind of data feed to the model.</li>
+  <li>Passing outputs of output layer or the hidden state to the dense layer.</li>
+</ol>
 
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/blog/jupyter/2020/02/20/test.html">
-    Fastpages Notebook Blog Post
-    </a>
-</h3><p class="post-meta-description">A tutorial of fastpages for Jupyter notebooks.</p><p class="post-meta">Feb 20, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/markdown/2020/01/14/test-markdown-post.html">
-    An Example Markdown Post
-    </a>
-</h3><p class="post-meta-description">A minimal example of using markdown with fastpages.</p><p class="post-meta">Jan 14, 2020</p>
-</li></ul>
+<h2 id="3-a-multiclass-classification-using-the-embedding-bag-layer">3. A multiclass classification using the Embedding bag layer</h2>
 
-    </div>
+<p>The Embedding layer gives us a vector representation for every token while the embeddingbg performs an aggregation operation on top of every sentence and returns the result.</p>
+
+<p>Embedding I/P : [[‘hi’, how’, ‘are’, ‘you’], [‘ok’, ‘bye’, ‘<pad>', '<pad>']]</pad></pad></p>
+
+<p>Embedding layer O/P : (2,4,64)</p>
+
+<p>Embedding bag I/P : [‘hi’, how’, ‘are’, ‘you’, ‘ok’, ‘bye’]</p>
+
+<p>Embedding bag O/ P: There is no need of padding tokens it can be directly fed. (2, 64) -&gt; (B, embed_dim)</p>
+
+<p>Embedding bag since it performs some aggregate operation sequential information is lost. There is no need of padding. Offsets should be mentioned instead of the padding. The offsets of above example is [0, 4] since first sentence starts from 0 and second sentence starts at 4th index.</p>
+
+<h2 id="4-football-name-generator-with-char-rnn">4. Football name generator with char RNN</h2>
+
+<ol>
+  <li>Without conditional generation - <strong>implemented</strong></li>
+  <li>With conditional generation – <strong>yet to implement</strong></li>
+</ol>
+
+<p>More at : https://pytorch.org/docs/stable/generated/torch.nn.EmbeddingBag.html</p>
+
+<h2 id="5-classification-with-ulmfit-awd-lstm-and-fastai">5. Classification with ULMFiT (AWD-LSTM) and fastai</h2>
+
+  </div>
+
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/blog/"></data>
