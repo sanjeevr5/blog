@@ -53,6 +53,13 @@ Embedding bag since it performs some aggregate operation sequential information 
 1. Without conditional generation - **implemented**
 2. With conditional generation -- **yet to implement**
 
-More at : https://pytorch.org/docs/stable/generated/torch.nn.EmbeddingBag.html
 
 ## [5. Classification with ULMFiT (AWD-LSTM) and fastai](https://github.com/sanjeevr5/NLP_Excercises/blob/main/DL_With_NLP_ULMFiT_LM.ipynb)
+
+## [6. Distributed Pytorch learning on MS Azure Platform - Multiclass classification](https://github.com/sanjeevr5/NLP_Excercises/blob/main/Distributed_Training_Azure_PyTorch.ipynb)
+
+1. This activity is performed on AG News dataset. There are 4 labels.
+2. 2d Max Pooling layer is used as the feeder layer for the SOFTMAX layer.
+3. Very fast to train and showing decent results for just 2 epochs and the size of the network is small compared to the above representations.
+4. Uses Azure Machine Learning with compute clusters for distributed training. Uses CPUs only and can be changed to GPU (NV) series clusters with a single change of the code.
+5. **Uses Service Principal Mechanism for authentication and docker containers for training
