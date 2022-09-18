@@ -1,7 +1,7 @@
 ---
 layout: page
-title: CV
+title: Photography
 permalink: /about/
 ---
-**Data scientist with a focus on natural language and vision.**
+Will be updated soon...
 
