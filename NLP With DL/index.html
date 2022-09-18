@@ -131,9 +131,17 @@ window.onload = wrap_img;
   <li>With conditional generation – <strong>yet to implement</strong></li>
 </ol>
 
-<p>More at : https://pytorch.org/docs/stable/generated/torch.nn.EmbeddingBag.html</p>
-
 <h2 id="5-classification-with-ulmfit-awd-lstm-and-fastai"><a href="https://github.com/sanjeevr5/NLP_Excercises/blob/main/DL_With_NLP_ULMFiT_LM.ipynb">5. Classification with ULMFiT (AWD-LSTM) and fastai</a></h2>
+
+<h2 id="6-distributed-pytorch-learning-on-ms-azure-platform---multiclass-classification"><a href="https://github.com/sanjeevr5/NLP_Excercises/blob/main/Distributed_Training_Azure_PyTorch.ipynb">6. Distributed Pytorch learning on MS Azure Platform - Multiclass classification</a></h2>
+
+<ol>
+  <li>This activity is performed on AG News dataset. There are 4 labels.</li>
+  <li>2d Max Pooling layer is used as the feeder layer for the SOFTMAX layer.</li>
+  <li>Very fast to train and showing decent results for just 2 epochs and the size of the network is small compared to the above representations.</li>
+  <li>Uses Azure Machine Learning with compute clusters for distributed training. Uses CPUs only and can be changed to GPU (NV) series clusters with a single change of the code.</li>
+  <li>**Uses Service Principal Mechanism for authentication and docker containers for training</li>
+</ol>
 
   </div>
 
